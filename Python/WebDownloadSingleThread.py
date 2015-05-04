@@ -122,12 +122,11 @@ def downjpgmutithread( filepathlist ):
 
     print("已经完成所有任务")
 
-testFile=["https://40.media.tumblr.com/a84df946bb76ba31a242a95e049ace44/tumblr_nnrajmdjPR1u37z5fo1_540.jpg"]
+
 if __name__ =='__main__':
     for root,dirs,files in os.walk(distdir):
         for file in files:
             allfiles.append(file)
-    #downjpg(testFile[0])
     #print allfiles
     #get_singlePage(sigurl)
     get_rootPage(rooturl)
