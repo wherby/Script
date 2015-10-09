@@ -5,4 +5,6 @@ $paths=@{"python"='C:\Python27';"home"='C:\Users\zhoust';"columbus"="C:\Users\zh
            "sdk"='C:\Users\zhoust\Documents\GitHub\Platform-SDK-JS';
            "pportal"='C:\Users\zhoust\Documents\GitHub\Platform-SDK-Portal';
            "settion"='C:\Users\zhoust\Documents\GitHub\Script-master\Powershell\GoTo\';
-           "ruby"='D:\Coursera\Ruby\RubyOnRails'}
+           "ruby"='D:\Coursera\Ruby\RubyOnRails';
+           "scalaTest"='C:\Users\zhoust\Documents\Temp\TEMPTest;notepad .\Main.scala';
+           "debug"='C:\Users\zhoust\Documents\Temp\TEMPTest;scalac -Xprint:parse Main.scala'}
