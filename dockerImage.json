@@ -1,0 +1,45 @@
+{
+    "container": {
+        "docker": {
+            "image": "fbrx/tomcat",
+            "network": "BRIDGE",
+            "portMappings": [
+                {
+                    "containerPort": 8080,
+                    "hostPort": 0,
+                    "protocol": "tcp",
+                    "servicePort": 9005
+                }
+            ],
+
+        },
+        "volumes": [
+            {
+                "containerPath": "/etc/dockerSecret",
+                "hostPath": "/home/ec2-user/Mesos/dockerSecret",
+                "mode": "RO"
+            }
+        ],
+        "type": "DOCKER"
+    },
+    "cpus": 1.0,
+    "id": "healthcheckjava",
+    "instances": 1,
+    "mem": 2048.0,
+    "uris": [
+        "https://s3.amazonaws.com/docker-app-deploy/dashboard.war"
+    ],
+    "healthChecks": [
+        {
+            "protocol": "HTTP",
+            "path": "/dashboard/app",
+            "gracePeriodSeconds": 3,
+            "intervalSeconds": 10,
+            "port": 8080,
+            "timeoutSeconds": 10,
+            "maxConsecutiveFailures": 3
+        }]    
+}
+
+
+ curl -X POST http://10.0.0.85:8080/v2/apps -d @dockerForJava2.json -H "Content-type: application/json"

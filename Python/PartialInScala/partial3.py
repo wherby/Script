@@ -1,4 +1,3 @@
-
 class partialFunInScala(object):
     funs=[]
     def __init__(self, f):
@@ -7,19 +6,13 @@ class partialFunInScala(object):
         partialFunInScala.funs.append(f)
 
     def __call__(self,arg):
-        #global funs
-        #print "Entering", self.f.__name__
         for f in reversed(partialFunInScala.funs):
             if f(arg)==0:
-                break
-
-
- 
+                break 
 
 @partialFunInScala
 def func1(a):
     print "inside func1()"
-
 
 @partialFunInScala
 def func2(a):  
