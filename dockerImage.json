@@ -1,4 +1,5 @@
 {
+    "cmd": "ls /etc/dockerSecret;./catalina.sh stop;cd $MESOS_SANDBOX && cp dashboard.war /opt/apache-tomcat/webapps/dashboard.war;cp /etc/dockerSecret/SecretKey /opt/apache-tomcat/bin/SecretKey;cd /opt/apache-tomcat/bin;./catalina.sh run",
     "container": {
         "docker": {
             "image": "fbrx/tomcat",
@@ -27,7 +28,7 @@
     "instances": 1,
     "mem": 2048.0,
     "uris": [
-        "https://s3.amazonaws.com/docker-app-deploy/dashboard.war"
+        "https://s3.amazonaws.com/******/dashboard.war"
     ],
     "healthChecks": [
         {
